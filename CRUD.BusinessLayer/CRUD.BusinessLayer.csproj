@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F0407D1D-1478-4988-8E42-A9B85CEEA8AA}</ProjectGuid>
+    <ProjectGuid>{1A846659-8566-43F5-AF2F-B8750347738B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRUD.DataLayer</RootNamespace>
-    <AssemblyName>CRUD.DataLayer</AssemblyName>
+    <RootNamespace>CRUD.BusinessLayer</RootNamespace>
+    <AssemblyName>CRUD.BusinessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,7 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,12 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
-    <Compile Include="DepartamentoDL.cs" />
-    <Compile Include="EmpleadoDL.cs" />
+    <Compile Include="DepartamentoBL.cs" />
+    <Compile Include="EmpleadoBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CRUD.DataLayer\CRUD.DataLayer.csproj">
+      <Project>{f0407d1d-1478-4988-8e42-a9b85ceea8aa}</Project>
+      <Name>CRUD.DataLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CRUD.EntityLayer\CRUD.EntityLayer.csproj">
       <Project>{54d968a0-d990-460d-9a3b-4aa7531000f9}</Project>
       <Name>CRUD.EntityLayer</Name>
